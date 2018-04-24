@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CARDS } from '../mock-data';
 
 @Component({
   selector: 'app-card-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit {
+
+  cards = CARDS;
 
   constructor() { }
 

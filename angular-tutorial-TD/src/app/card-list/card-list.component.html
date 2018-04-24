@@ -1,13 +1,13 @@
 <h2> Card List </h2>
 <ul class="card-list">
-  <li>
+  <li *ngFor="let card of cards">
       <div class="card-list-row">
 	      <span class="card-img-col">
-	        <img class="card-list-img" src="">
+	        <img class="card-list-img" src="../assets/images/card_{{card.id}}.jpg">
 	      </span>
         <span class="card-description-col">
-		      <p class="card-name"></p>
-		      <p class="card-description"></p>
+		      <p class="card-name">{{card.name}}</p>
+		      <p class="card-description">{{card.description}}</p>
 		  </span>
       </div>
   </li>
