@@ -1,0 +1,58 @@
+## April 24, 2018
+
+### What is Angular, Why Angular?
+Angular: JS framework for building client-side applications
+
+Why angular? Makes our HTML more expressive; powerful data binding; modular by design (easier to create content); built in back end integration
+
+Why a new Angular? Built for speed (improve render times); modern (classes, modules, support new and existing browsers); simplified API; Angular enhances productivity
+
+
+Companies with Angular: McDonald, Autodesk,
+
+### Angular Module: a class with an NgModule decorator (organize pieces of our application and arrange them into blocks)
+Loaded when application starts or lazy loaded
+
+Import { NgModule } from ‘@angular/core’;
+@NgModule({
+
+bootstrap: [] ← define components
+
+})
+
+#### Angular components: basic building blocks of apps (necessary imports, decorator, class where component logic is stored)
+ 
+import 
+@component
+export class AppComponent { title =  “app”}
+
+#### Templates – HTML, how to render Component
+
+Template 
+“<h1>{{pageTitle}}</h1>”
+Better to use a URL 
+templateURL:  ‘/style/component/etc’;
+styleURLS:
+
+3 things to make components work: component, template, metadata
+
+Metadata: gives info to Angular where components are built
+
+Data binding: 
+Interpolation: Component to DOM
+One way binding: Component to DOM
+
+
+Event binding: DOM to Component
+Two way binding: both ways
+
+#### Services: a class with a focused purpose
+Provides anything a component needs
+Export class myService()
+Injector contains the service instance (singleton)
+Component class defines service as a dependency
+Injector to component is a service injection
+Constructor (private _myservice)
+
+#### Routing
+Route - configure a route for each component
