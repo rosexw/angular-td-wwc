@@ -1,0 +1,17 @@
+<div class="card-detail">
+  <span class="card-detail-row">
+        <img src="../../assets/card_{{card.id}}.jpg">
+  </span>
+  <span class="card-detail-row">{{card.name}}</span>
+  <span class="card-detail-row">Description: {{card.description}}</span>
+  <span class="card-detail-row">
+  		<li>Annual Fee: {{card.annualFee | currency:'CAD'}}</li>
+  		<li>Interest: {{card.interest}}%</li>
+  </span>
+
+  <span class="card-detail-row">
+  	<button class="td-button" (click)="applyCard(card.name)">Apply Now</button>
+    <button class="td-button" (click)="goBack()">Back</button>
+  </span>  
+
+</div>

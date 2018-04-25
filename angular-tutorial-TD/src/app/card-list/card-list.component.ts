@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CARDS } from '../mock-data';
+import { Card } from '../card';
+
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-card-list',
@@ -8,11 +10,16 @@ import { CARDS } from '../mock-data';
 })
 export class CardListComponent implements OnInit {
 
-  cards = CARDS;
+  cards: Card[];
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit() {
+    this.getCards();
+  }
+
+  getCards(): void {
+    this.cards = this.dataService.getCards();
   }
 
 }
